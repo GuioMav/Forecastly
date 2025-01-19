@@ -12,9 +12,15 @@ body {
     align-items: center;
     justify-content: center;
     background: #06283D;
+    background-size: cover; /* Ensures background image covers the whole screen */
+    background-position: center;
+    background-image: url('https://wallpapercave.com/wp/wp11661193.jpg');
+    transition: background-image 1s ease-in-out; /* Smooth background transition */
 }
 
-.container {
+/* Plain White Background for the container*/
+
+/* .container {
     position: relative;
     width: 400px;
     height: 104px;
@@ -24,7 +30,23 @@ body {
     border-radius: 18px;
     font-family: 'Roboto', sans-serif;
     transition: 0.6s ease-out;
+} */
+
+.container {
+    position: relative;
+    width: 400px;
+    height: 104px;
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(8px); 
+    padding: 28px 32px;
+    overflow: hidden;
+    border-radius: 18px;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.6s ease-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+
 
 .search-bar {
     width: 100%;
@@ -32,6 +54,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: white; /* Same transparent white background */
+    border-radius: 12px; /* Optional: rounding the corners */
+    padding: 8px; /* Optional: space inside the search bar */
 }
 
 .search-bar input {
@@ -72,11 +97,12 @@ body {
     font-size: 28px;
 }
 
-/* .search-bar i:hover {
+.search-bar i:hover {
     position: relative;
     color:#fff;
     font-size: 28px;
-} */
+}
+
 .weather-box {
     text-align: center;
 }
